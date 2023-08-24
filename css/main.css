@@ -1,0 +1,285 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    font-family: nekst-3d-light;
+    
+    
+}
+@font-face {
+    font-family: nekst-3d-light;
+    src: url(../fonts/Nekst-Light.woff);
+    font-weight: bold;
+}
+@font-face {
+    font-family: nekst-3d-regular;
+    src: url(../fonts/Nekst-Regular.woff);
+    font-weight: bold;
+}
+@font-face {
+    font-family: nekst-3d-black;
+    src: url(../fonts/Nekst-Black.woff);
+    font-weight: bold;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+:root{
+    --dark:#001a1f;
+    --green:#00b533;
+    
+
+}
+button{
+    border: none;
+}
+img{
+    width: 100%;
+}
+
+
+header{
+    padding: 10px 3%;
+    background-color: var(--dark);
+    height: 100vh;
+    width: 100%;
+    max-width:200px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+    color: white;
+    left: 0;
+    
+    
+}
+.nav-bar ul li a{
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+}
+
+.nav-bar ul li{
+    margin: 10px 0px;
+}
+section{
+    padding: 2rem 5%;
+}
+.register-btn button{
+    background-color: var(--green);
+    border-radius: 50%;
+    text-transform: uppercase;
+    font-family:nekst-3d-regular ;
+    
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+
+}
+
+.hr{
+    width: 100%;
+    padding: 0 0;
+    height: 0.3px;
+    background-color: rgba(255, 255, 255, 0.336);
+}
+.register-btn{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.apply-btn{
+    display: flex;
+    justify-content: center;
+}
+.apply-btn button{
+    padding: 15px 30px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    border:1px solid rgba(255, 255, 255, 0.658) ;
+}
+
+.lang{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.main-header{
+    display: none;
+}
+/*------------HOME--------------------*/
+
+.home{
+    padding: 0;
+    height: 100vh;
+    margin-left: 280px;
+}
+
+.home img{
+    height: 100%;
+    object-fit: cover;
+}
+.home-img{
+    height: 100%;
+}
+
+/*-------------MEDIA QURIES------------*/
+
+
+@media(max-width:950px){
+    header{
+        width: 100%;
+        max-width: 180px;
+    }
+    .register-btn button{
+        width: 120px;
+        height: 120px;
+        padding: 00px;
+    }
+    .apply-btn button{
+        padding: 10px 15px;
+    }
+    .logo svg{
+        width: 100%;
+        max-width: 100px;
+    }
+}
+
+@media(max-width:850px){
+    .hamburger.toggled{
+        gap: 0;
+    }
+
+    .ham-line1.toggled{
+        transform: rotate(45deg);
+    }
+    .ham-line2.toggled{
+        transform: rotate(-45deg);
+    }
+    .main-logo svg{
+        width: 130px;
+    }
+    .main-header{
+        display: grid;
+        padding: 0rem 5%;
+        height: 80px;
+        align-items: center;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.8);
+    }
+    header{
+        background: transparent;
+        transition: none;
+    }
+
+    .hamburger{
+        width:30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgb(250, 250, 250);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .hamburger .line{
+        width: 90%;
+        
+        height: 1px;
+        background-color: black;
+        
+    }
+
+
+    .circle{
+        position: absolute;
+        background-color: var(--green);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        bottom: -10px;
+        right: 30px;
+        filter: blur(1px);
+    }
+
+    .circle2{
+        position: absolute;
+        background-color: var(--green);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: 20%;
+        right: 150px;
+        filter: blur(5px);
+
+    }
+    .nav-bar{
+        transform: translateX(-100px);
+        opacity: 0;
+        transition: 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        visibility: visible;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 30px;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.8);
+    }
+
+    .nav-bar.open-nav{
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+
+    .nav-bar ul li a{
+        color: black;
+        font-size: 16px;
+        font-family:nekst-3d-regular ;
+    }
+    .register-btn{
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .lang{
+        display: none;
+    }
+
+    .apply-btn{
+        display: none;
+    }
+
+    .hr{
+        display: none;
+    }
+
+
+    
+
+    
+}
